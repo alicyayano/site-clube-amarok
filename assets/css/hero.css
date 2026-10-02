@@ -1,0 +1,134 @@
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  background: url("../images/hero/hero.jpg") center center/cover no-repeat;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    rgba(5, 15, 30, 0.75),
+    rgba(5, 15, 30, 0.55),
+    rgba(13, 17, 23, 0.9)
+  );
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  text-align: center;
+
+  animation: fadeUp 1s ease;
+}
+
+.subtitle {
+  display: inline-block;
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.hero p {
+  color: var(--gray);
+
+  font-size: 1.2rem;
+
+  line-height: 34px;
+
+  margin-bottom: 45px;
+}
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.scroll {
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  font-size: 2rem;
+
+  color: white;
+
+  animation: scroll 2s infinite;
+}
+
+/* ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}

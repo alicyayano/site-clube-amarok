@@ -1,0 +1,129 @@
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 999;
+
+  transition: 0.4s ease;
+}
+
+header.active {
+  background: rgba(13, 17, 23, 0.85);
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+header .container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 90px;
+}
+
+/* ========================= */
+
+.logo img {
+  height: 65px;
+
+  transition: 0.3s;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
+header.active .logo img {
+  height: 58px;
+}
+
+/* ========================= */
+
+nav ul {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+nav a {
+  color: white;
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--primary);
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ========================= */
+
+.btn-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 28px;
+
+  background: var(--primary);
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn-header:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-3px);
+}
+
+.btn-header i {
+  font-size: 1.1rem;
+}
